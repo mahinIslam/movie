@@ -2,7 +2,7 @@
 
 Application that let's you search for movies and TV shows and also let's you add and remove them from favorites
 
-Technologies used
+#Technologies used
 
 React JS, JSX
 Chakra UI
