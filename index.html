@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movie Search</title>
+  </head>
+  <body>
+    <h1>Movie Search</h1>
+    <form id="search-form">
+      <label for="movie-title">Movie Title:</label>
+      <input type="text" id="movie-title" name="movie-title" required>
+      <button type="submit">Search</button>
+    </form>
+    <div id="search-results"></div>
+    <div id="movie-details"></div>
+    <script>
+      const apiKey = 'e0801912'; // with API key
+      const searchForm = document.getElementById('search-form');
+      const searchResults = document.getElementById('search-results');
+      const movieDetails = document.getElementById('movie-details');
+
+      searchForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const movieTitle = document.getElementById('movie-title').value;
+        const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${movieTitle}`;
+        fetch(url)
+          .then(response => response.json())
+          .then(data => {
+            const results = data.results;
+            let html = '<ul>';
+            results.forEach(movie => {
+              html += `
+                <li>
+                  <img src="https://image.tmdb.org/t/p/w92${movie.poster_path}" alt="${movie.title} poster">
+                  <h2>${movie.title}</h2>
+                  <p>${movie.release_date}</p>
+                  <button data-movie-id="${movie.id}">See Details</button>
+                </li>
+              `;
+            });
+            html += '</ul>';
+            searchResults.innerHTML = html;
+          });
+      });
+
+      
