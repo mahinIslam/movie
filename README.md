@@ -11,7 +11,9 @@ npx create-movie-search <name>
 2. The user submits the search form, using JavaScript to send a request to a movie database API to search for movies by title.Once receive the search results from the API, use JavaScript to display the results in a list view. For each movie result, display the movie title, poster image, and year of release.
 3. adding functionality to allow users to click on a specific movie from the search results to view more details about that movie.
 4.When a user clicks on a movie from the search results, using JavaScript to send a request to the movie database API to fetch more details about the selected movie.
+
 5.Once receiving the details of the selected movie, using JavaScript to display the movie title, poster image, year of release, plot, and any other relevant information.
+
 Here are some additional details for each step:
 1.HTML structure
 2. JavaScript code for movie search
