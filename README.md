@@ -11,11 +11,21 @@ Application that let's you search for movies and TV shows and also let's you add
 
 #Technologies used
 Accesses The Movie Database (Omdb) API for movie related data
+
 Uses React
+
 Uses Axios for data fetching, included in a custom React Hook
+
 Uses React Router for routing
+
 Styled with Styled Components
+
 Uses icons from Styled Icons (FontAwesome)
+
+#command:
+npm install
+npm run build 
+npm start
 
 
 
