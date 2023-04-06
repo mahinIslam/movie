@@ -10,6 +10,7 @@ Application that let's you search for movies and TV shows and also let's you add
 
 
 #Technologies used
+
 Accesses The Movie Database (Omdb) API for movie related data
 
 Uses React
@@ -23,8 +24,11 @@ Styled with Styled Components
 Uses icons from Styled Icons (FontAwesome)
 
 #command:
+
 npm install
+
 npm run build 
+
 npm start
 
 
